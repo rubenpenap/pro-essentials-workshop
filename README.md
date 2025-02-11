@@ -1,3 +1,13 @@
+> ## 🚨 Important Notice
+>
+> This repository is a clone of the
+> [TypeScript Pro Essentials Workshop](https://github.com/total-typescript/pro-essentials-workshop)
+> by Matt Pocock. It has been published solely to document my GitHub activity
+> and for personal educational purposes.
+>
+> **Note:** This is not an official fork or a maintained derivative of the
+> original project.
+
 <a href="https://totaltypescript.com/"><img src="https://res.cloudinary.com/total-typescript/image/upload/v1714636660/pro-essentials-github-cover_gw2bah.png" alt="Total TypeScript by Matt Pocock" /></a>
 
 ## Quickstart
