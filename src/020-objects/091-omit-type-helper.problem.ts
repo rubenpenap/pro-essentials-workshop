@@ -1,24 +1,24 @@
 interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
+	id: number;
+	name: string;
+	price: number;
+	description: string;
 }
 
-const addProduct = (productInfo: Product) => {
-  // Do something with the productInfo
+const addProduct = (productInfo: Omit<Product, 'id'>) => {
+	// Do something with the productInfo
 };
 
 addProduct({
-  name: "Book",
-  price: 12.99,
-  description: "A book about Dragons",
+	name: 'Book',
+	price: 12.99,
+	description: 'A book about Dragons',
 });
 
 addProduct({
-  // @ts-expect-error
-  id: 1,
-  name: "Book",
-  price: 12.99,
-  description: "A book about Dragons",
+	// @ts-expect-error
+	id: 1,
+	name: 'Book',
+	price: 12.99,
+	description: 'A book about Dragons',
 });
