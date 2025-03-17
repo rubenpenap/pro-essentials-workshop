@@ -1,11 +1,11 @@
 type ButtonAttributes = {
-  type: "button" | "submit" | "reset";
+	type: 'button' | 'submit' | 'reset';
 };
 
 const modifyButton = (attributes: ButtonAttributes) => {};
 
 const buttonAttributes = {
-  type: "button",
-};
+	type: 'button',
+} as const;
 
 modifyButton(buttonAttributes);
