@@ -1,10 +1,10 @@
 import { expect, it, vi } from 'vitest';
 
 enum LogLevel {
-	DEBUG,
-	INFO,
-	WARN,
-	ERROR,
+	DEBUG = 0,
+	INFO = 1,
+	WARN = 2,
+	ERROR = 3,
 }
 
 function log(opts: {
