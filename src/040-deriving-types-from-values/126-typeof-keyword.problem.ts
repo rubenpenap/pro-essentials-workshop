@@ -15,9 +15,7 @@ const configurations = {
 	},
 };
 
-type Configurations = typeof configurations;
-
-type Environment = keyof Configurations;
+type Environment = keyof typeof configurations;
 
 type test = Expect<
 	Equal<Environment, 'development' | 'production' | 'staging'>
