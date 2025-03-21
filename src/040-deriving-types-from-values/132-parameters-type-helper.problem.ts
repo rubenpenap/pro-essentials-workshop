@@ -1,32 +1,32 @@
-import { Equal, Expect } from "@total-typescript/helpers";
+import { Equal, Expect } from '@total-typescript/helpers';
 
 const makeQuery = (
-  url: string,
-  opts?: {
-    method?: string;
-    headers?: {
-      [key: string]: string;
-    };
-    body?: string;
-  },
+	url: string,
+	opts?: {
+		method?: string;
+		headers?: {
+			[key: string]: string;
+		};
+		body?: string;
+	},
 ) => {};
 
-type MakeQueryParameters = unknown;
+type MakeQueryParameters = Parameters<typeof makeQuery>;
 
 type tests = [
-  Expect<
-    Equal<
-      MakeQueryParameters,
-      [
-        url: string,
-        opts?: {
-          method?: string;
-          headers?: {
-            [key: string]: string;
-          };
-          body?: string;
-        },
-      ]
-    >
-  >,
+	Expect<
+		Equal<
+			MakeQueryParameters,
+			[
+				url: string,
+				opts?: {
+					method?: string;
+					headers?: {
+						[key: string]: string;
+					};
+					body?: string;
+				},
+			]
+		>
+	>,
 ];
