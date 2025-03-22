@@ -5,7 +5,7 @@ interface FetchOptions {
   body?: string;
 }
 
-const options: FetchOptions = {
+const options = {
   url: "/",
   method: "GET",
   headers: {
@@ -15,7 +15,7 @@ const options: FetchOptions = {
   search: new URLSearchParams({
     limit: "10",
   }),
-};
+} satisfies FetchOptions;
 
 const myFetch = async (options: FetchOptions) => {};
 
