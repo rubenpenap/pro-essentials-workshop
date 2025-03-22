@@ -1,4 +1,6 @@
-type EmptyObject = Record<PropertyKey, never>;
+// From https://github.com/sindresorhus/type-fest/issues/395#issuecomment-1162156994
+declare const tag: unique symbol;
+type EmptyObject = { [tag]?: never };
 
 const acceptOnlyEmptyObject = (input: EmptyObject) => {};
 
@@ -6,7 +8,7 @@ acceptOnlyEmptyObject({});
 
 acceptOnlyEmptyObject({
   // @ts-expect-error
-  a: "abc",
+  a: 1,
 });
 acceptOnlyEmptyObject(
   // @ts-expect-error
