@@ -1,21 +1,21 @@
-import { expect, it } from "vitest";
+import { expect, it } from 'vitest';
 
 const getObj = () => {
-  const obj: {
-    a: number;
-    b: number;
-  } = JSON.parse('{ "a": 123, "b": 456 }');
+	const obj = JSON.parse('{ "a": 123, "b": 456 }') as {
+		a: number;
+		b: number;
+	};
 
-  return obj;
+	return obj;
 };
 
-it("Should return an obj", () => {
-  const obj = getObj();
+it('Should return an obj', () => {
+	const obj = getObj();
 
-  expect(obj.b).toEqual(456);
+	expect(obj.b).toEqual(456);
 
-  expect(
-    // @ts-expect-error c doesn't exist on obj
-    obj.c,
-  ).toEqual(undefined);
+	expect(
+		// @ts-expect-error c doesn't exist on obj
+		obj.c,
+	).toEqual(undefined);
 });
