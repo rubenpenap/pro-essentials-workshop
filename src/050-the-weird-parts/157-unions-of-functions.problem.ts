@@ -5,8 +5,11 @@ const objOfFunctions = {
 };
 
 const format = (input: string | number | boolean) => {
-	const inputType = typeof input as 'string' | 'number' | 'boolean';
-	const formatter = objOfFunctions[inputType];
-
-	return formatter(input as never);
+	if (typeof input === 'string') {
+		return objOfFunctions.string(input);
+	} else if (typeof input === 'number') {
+		return objOfFunctions.number(input);
+	} else {
+		return objOfFunctions.boolean(input);
+	}
 };
