@@ -5,10 +5,10 @@ interface User {
 	name: string;
 }
 
-function printUser(user: Record<string, any>) {
-	Object.keys(user).forEach((key) => {
-		console.log(user[key]);
-	});
+function printUser(user: User) {
+	for (const key in user) {
+		console.log(user[key as keyof User]);
+	}
 }
 
 it('Should log all the keys of the user', () => {
