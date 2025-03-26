@@ -2,12 +2,10 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
+      "ES2022"
     ]
   },
   "include": [
-    "src/client"
+    "../src/server"
   ]
 }
