@@ -1,8 +1,8 @@
-import { Equal, Expect } from "@total-typescript/helpers";
+import { Equal, Expect } from '@total-typescript/helpers';
 
 // CODE
 
-type PromiseFunc = (input: any) => Promise<any>;
+type PromiseFunc<TInput, TOutput> = (input: TInput) => Promise<TOutput>;
 
 // TESTS
 
